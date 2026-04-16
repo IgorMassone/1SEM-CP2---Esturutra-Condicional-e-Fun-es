@@ -23,4 +23,5 @@ if cp3<cp1 and cp3<cp2:
     print()
     print(f"A sua média sem os pesos é {media3:.2f}")
     print(f'A sua média com os pesos é {mediapeso3:.2f}')
+    #aaaaaaaaaaaaaaa
 
