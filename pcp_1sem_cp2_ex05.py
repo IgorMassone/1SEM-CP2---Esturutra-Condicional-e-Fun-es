@@ -9,21 +9,20 @@ def pode_aprovar(idade, renda, valor):
 def definir_taxa(parcelas):
     if parcelas <= 6:
         return 0.05
-    elif parcelas == 7 or parcelas <= 12:
+    elif parcelas <= 12:
         return 0.08
-    elif parcelas == 13 or parcelas <= 24:
+    else:
         return 0.1
 
+# Função que calcula a taxa fixa a partir de
 def calcular_parcela(valor, taxa, parcela):
-    return valor * ((taxa * (1 + taxa) ** n_parcelas) / ((1 + taxa) ** n_parcelas - 1))
+    return valor * ((taxa * (1 + taxa) ** parcela) / ((1 + taxa) ** parcela - 1))
 
 def calcular_total(parcela, parcelas):
-    total = parcela * parcelas
-    return total
+    return parcela * parcelas
 
 def calcular_juros(total, valor):
-    juros = total - valor
-    return juros
+    return total - valor
 
 nome = input("Digite seu nome: ")
 idade = int(input("Digite sua idade: "))
