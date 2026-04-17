@@ -36,12 +36,9 @@ aprovado = pode_aprovar(idade, renda_mensal, valor_emprestimo)
 if aprovado:
     taxa = definir_taxa(n_parcelas)
     pmt = calcular_parcela(valor_emprestimo, taxa, n_parcelas)
-    total = calcular_total(pmt, n_parcelas)
-    juros = calcular_juros(total, valor_emprestimo)
+    total_pago = calcular_total(pmt, n_parcelas)
+    total_juros = calcular_juros(total_pago, valor_emprestimo)
 
-    print(f"Olá {nome}, seu empréstimo de R$ {valor_emprestimo:.2f} com taxa de {taxa * 100}%, \ne valor da parcela fixa de R$ {pmt:.2f} resultou em um valor total de R$ {total:.2f}, com R$ {juros:.2f} de ")
+    print(f"Olá {nome}!\nEmpréstimo de: R$ {valor_emprestimo:.2f}\nTaxa aplicada: {taxa * 100:.1f}% ao mês\nParcelas: {n_parcelas}x de R${pmt:.2f}\nValor Total Final: R$ {total_pago:.2f}\nTotal pago em juros: R$ {total_juros:.2f}")
 else:
-    print("Emprestimo negado >:(")
-
-# FALTA CORRIGIR O VALOR FINAL AAAAAAAAA
-
+    print(f"Sinto muito, {nome}. Empréstimo negado com base nos critérios de idade ou renda.")
