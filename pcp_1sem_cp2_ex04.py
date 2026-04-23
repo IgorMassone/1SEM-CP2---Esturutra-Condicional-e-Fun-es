@@ -31,4 +31,4 @@ def calcular_bonus(cargo, recebeu_bonus):
     print(f"Salário Base: {salario_base} | Total de acréscimos: {valor_somado} | Total de descontos: {valor_descontado}")
     print(f"Salário final: {resultado}")
 
-calcular_bonus(cargo, True)
+calcular_bonus(cargo, se_recebou_bonus)
